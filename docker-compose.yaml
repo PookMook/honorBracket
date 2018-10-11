@@ -4,7 +4,7 @@ services:
   HonorBracket:
     restart: always
     build: .
-        environment:
+    environment:
       - NODE_ENV=production
       - VIRTUAL_HOST=honorspy-northdale-alliance.wowclassictools.com
       - VIRTUAL_NETWORK=nginx-proxy
