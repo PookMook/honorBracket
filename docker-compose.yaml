@@ -5,7 +5,8 @@ services:
     restart: 'no'
     build: .
     volumes:
-      - ./public:/gatsby/public
+      - ./public:/public
+    command: bash /exec.sh
     environment:
       - NODE_ENV=production
       - VIRTUAL_HOST=honorspy-northdale-alliance.classicwowtools.com
