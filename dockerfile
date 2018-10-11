@@ -1,9 +1,6 @@
 FROM node:8.9
 
-ADD ./package.json .
+ADD ./gatsby/package.json .
 RUN npm install
-ADD . .
+ADD ./gatsby .
 RUN npm run build
-
-EXPOSE 9000
-CMD ["npm","run","serve"]
