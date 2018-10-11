@@ -5,7 +5,7 @@ services:
     restart: always
     build: .
     volumes:
-      - ./gatsby/public:./public
+      - ./gatsby/public:/gatsby/public
     environment:
       - NODE_ENV=production
       - VIRTUAL_HOST=honorspy-northdale-alliance.classicwowtools.com

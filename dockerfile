@@ -1,5 +1,8 @@
 FROM node:8.9
 
+RUN mkdir /gatsby
+WORKDIR /gatsby
+
 ADD ./gatsby/package.json .
 RUN npm install
 ADD ./gatsby .
