@@ -1,0 +1,17 @@
+version: "2"
+
+services:
+  HonorBracket:
+    restart: always
+    build: .
+        environment:
+      - NODE_ENV=production
+      - VIRTUAL_HOST=honorspy-northdale-alliance.wowclassictools.com
+      - VIRTUAL_NETWORK=nginx-proxy
+      - VIRTUAL_PORT=80
+      - LETSENCRYPT_HOST=honorspy-northdale-alliance.wowclassictools.com
+      - LETSENCRYPT_EMAIL=arthur.juchereau@gmail.com
+networks:
+  default:
+    external:
+      name: root_default
