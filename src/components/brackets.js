@@ -9,10 +9,10 @@ const Brackets = function (props) {
       <table>
         <thead>
           <th>Bracket</th>
-          <th>cutoff</th>
+          <th>Cutoff</th>
           <th>PoolSize</th>
-          <th>Top</th>
-          <th>floor</th>
+          <th>Honor ceiling</th>
+          <th>Honor floor</th>
           <th>Floor RP gains</th>
         </thead>
         <tbody>

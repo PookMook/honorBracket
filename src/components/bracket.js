@@ -2,14 +2,14 @@ import React  from 'react'
 
 const Bracket = function (props) {
   const lastInBracket = Math.floor((props.standings.length*props.bracket)/100)
-  let firstInBracket = 1
+  let firstInBracket = 0
   if(props.i > 0){firstInBracket = Math.floor((props.standings.length*BracketsPool[props.i-1])/100)}
   return (
     <tr>
       <td>{14 - props.i}</td>
-      <td>{props.bracket}%</td>
+      <td>top {props.bracket}%</td>
       <td>{lastInBracket}</td>
-      <td>{props.standings[firstInBracket-1].honor}</td>
+      <td>{props.standings[firstInBracket].honor}</td>
       <td>{props.standings[lastInBracket-1].honor}</td>
       <td>{BracketsRP[props.i]} RP</td>
     </tr>
