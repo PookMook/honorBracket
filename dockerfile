@@ -9,4 +9,5 @@ ADD ./gatsby .
 RUN ls
 RUN npm run build
 RUN ls
+RUN pwd
 RUN ls public
