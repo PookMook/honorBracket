@@ -2,7 +2,7 @@ version: "2"
 
 services:
   honor-bracket:
-    restart: always
+    restart: no
     build: .
     volumes:
       - ./gatsby/public:/gatsby/public
