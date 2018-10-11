@@ -5,5 +5,5 @@ RUN npm install
 ADD . .
 RUN npm run build
 
-EXPOSE 80
+EXPOSE 9000
 CMD ["npm","run","serve"]

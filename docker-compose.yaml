@@ -8,7 +8,7 @@ services:
       - NODE_ENV=production
       - VIRTUAL_HOST=honorspy-northdale-alliance.classicwowtools.com
       - VIRTUAL_NETWORK=nginx-proxy
-      - VIRTUAL_PORT=80
+      - VIRTUAL_PORT=9000
       - LETSENCRYPT_HOST=honorspy-northdale-alliance.classicwowtools.com
       - LETSENCRYPT_EMAIL=arthur.juchereau@gmail.com
 networks:
