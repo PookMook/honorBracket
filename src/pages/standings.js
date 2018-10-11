@@ -24,7 +24,7 @@ export const IndexQuery = graphql`
           honor
           class
           LWHonor
-          Standing
+          standing
           rank
           rankProgress
           RP
