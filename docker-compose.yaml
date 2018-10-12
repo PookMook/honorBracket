@@ -3,9 +3,11 @@ version: "2"
 services:
   honor-bracket:
     restart: 'no'
-    build: .
+    image: 'node'
     volumes:
       - ./public:/public
+      - ./gatsby:/gatsby
+      - ./exec.sh:/exec.sh
     command: bash /exec.sh
     environment:
       - NODE_ENV=production
