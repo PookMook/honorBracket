@@ -17,7 +17,8 @@ services:
     depends_on:
       - honor-build
     volumes:
-      - ./public:/usr/share/nginx/html
+      - ./public:/var/www
+      - ./nginx.conf:/etc/nginx/nginx.conf
     environment:
       - VIRTUAL_HOST=honorspy.classicwowtools.com
       - VIRTUAL_NETWORK=nginx-proxy
