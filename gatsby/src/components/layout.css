@@ -581,12 +581,14 @@ th {
   -webkit-font-feature-settings: "tnum";
 }
 thead{
-  background-color: rgb(255, 204, 0);
-  color:rgb(0, 51, 102);
   padding:0.25rem 0.5rem;
 }
 th,td {
   padding:0.25rem 0.5rem;
+}
+th{
+    color:rgb(0, 51, 102);
+    background-color: rgb(255, 204, 0);
 }
 td.leftAlign{
   text-align: left;

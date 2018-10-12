@@ -3,6 +3,7 @@ import React from 'react'
 import Layout from '../components/layout'
 import Brackets from '../components/brackets'
 import Nav from '../components/nav'
+import Calc from '../components/honorCalc'
 
 const IndexPage = function (props) {
   const standings = props.data.allCurrentWeekCsv.edges.map((node) => node.node).sort(compare)
@@ -26,6 +27,7 @@ const IndexPage = function (props) {
       <h1>Northdale alliance standing</h1>
       <Nav />
       <Brackets brackets={brackets} />
+      <Calc brackets={brackets} />
     </Layout>
   )
 }
