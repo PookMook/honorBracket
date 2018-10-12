@@ -18,6 +18,8 @@ services:
       - honor-build
     volumes:
       - ./public:/var/www
+    ports:
+      - 8999:80
     environment:
       - VIRTUAL_HOST=honorspy.classicwowtools.com
       - VIRTUAL_NETWORK=nginx-proxy

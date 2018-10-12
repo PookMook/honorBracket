@@ -5,7 +5,7 @@ import Brackets from '../components/brackets'
 import Nav from '../components/nav'
 
 const IndexPage = function (props) {
-  const standings = props.data.allCurrentWeekCsv.edges.map((node)=>node.node).sort(compare)
+  const standings = props.data.allCurrentWeekCsv.edges.map((node) => node.node).sort(compare)
   const brackets = bracketsPool.map(function (bracket, i) {
     const lastInBracket = Math.floor((standings.length * bracket) / 100)
     let firstInBracket = 0
@@ -14,7 +14,6 @@ const IndexPage = function (props) {
       {
         bracket: 14 - i,
         top: bracket,
-        test: "hello",
         PoolSize: lastInBracket,
         ceiling: standings[firstInBracket].honor,
         floor: standings[lastInBracket - 1].honor,
