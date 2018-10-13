@@ -1,10 +1,12 @@
 import React, {Component}  from 'react'
-
+import RankLine from './konvaRank'
 
 export default class Calc extends Component {
   constructor (props) {
     super(props)
-    this.state = {honor: 50000, rank: 8.23, brackets:props.brackets}
+    const defaults = {honor: 50000, rank: 8}
+    const defaultsCalculate = this.calculate(defaults)
+    this.state = {...defaultsCalculate, ...defaults}
     this.handleHonor = this.handleHonor.bind(this)
     this.handleRank = this.handleRank.bind(this)
     this.calculate = this.calculate.bind(this)
@@ -12,12 +14,11 @@ export default class Calc extends Component {
 
 
   handleHonor (e) {
-    this.setState({honor:e.target.value})
-    this.setState(this.calculate)
+    this.setState({honor:e.target.value},()=>this.setState(this.calculate))
   }
   handleRank (e) {
-    this.setState({rank:e.target.value})
-    this.setState(this.calculate)
+    this.setState({rank:e.target.value},()=>this.setState(this.calculate))
+
   }
 
   calculate ({honor, rank}) {
@@ -105,6 +106,7 @@ export default class Calc extends Component {
             </tr>
           </tbody>
         </table>
+        <RankLine state={this.state} />
       </div>
     )
   }
