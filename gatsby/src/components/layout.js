@@ -5,6 +5,7 @@ import { StaticQuery, graphql } from 'gatsby'
 
 import Header from './header'
 import './layout.css'
+import favicon from '../images/logo.png';
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -26,8 +27,11 @@ const Layout = ({ children }) => (
         <Helmet
           {...data.site.siteMetadata}
           meta={[
-            { name: 'description', content: 'Sample' },
-            { name: 'keywords', content: 'sample, something' },
+            { name: 'description', content: 'PvP ranking system Vanilla World of Warcraft' },
+            { name: 'keywords', content: 'Ranking, PvP, wow, world of warcraft, vanilla, 1.12, classic, ranks, honor, reward' },
+          ]}
+          link={[
+            { rel: 'shortcut icon', type: 'image/png', href: `${favicon}` }
           ]}
         >
           <html lang="en" />
