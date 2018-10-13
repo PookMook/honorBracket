@@ -344,6 +344,12 @@ ul {
   list-style-position: outside;
   list-style-image: none;
 }
+ul.compact{
+  margin:0 0 1rem 2rem;
+}
+ul.compact > li {
+  margin:0
+}
 ol {
   margin-left: 1.45rem;
   margin-right: 0;

@@ -1,0 +1,190 @@
+import React from 'react'
+
+const Weeksweek = () => (
+  <table>
+    <tr>
+      <th>week/bracket</th>
+      <th>5</th>
+      <th>6</th>
+      <th>7</th>
+      <th>8</th>
+      <th>9</th>
+      <th>10</th>
+      <th>11</th>
+      <th>12</th>
+      <th>13</th>
+      <th>14</th>
+      <th>14+</th>
+    </tr>
+    <tr>
+      <th>week 1</th>
+      <td>2.33</td>
+      <td>2.66</td>
+      <td>3</td>
+      <td>3.2</td>
+      <td>3.4</td>
+      <td>3.6</td>
+      <td>3.8</td>
+      <td>4</td>
+      <td>4.2</td>
+      <td>4.4</td>
+      <td>4.59</td>
+    </tr>
+    <tr>
+      <th>week 2</th>
+      <td>3.07</td>
+      <td>3.43</td>
+      <td>3.8</td>
+      <td>4.16</td>
+      <td>4.51</td>
+      <td>4.88</td>
+      <td>5.24</td>
+      <td>5.6</td>
+      <td>5.96</td>
+      <td>6.32</td>
+      <td>6.67</td>
+    </tr>
+    <tr>
+      <th>week 3</th>
+      <td>3.45</td>
+      <td>3.94</td>
+      <td>4.44</td>
+      <td>4.92</td>
+      <td>5.4</td>
+      <td>5.9</td>
+      <td>6.39</td>
+      <td>6.88</td>
+      <td>7.36</td>
+      <td>7.85</td>
+      <td>8.33</td>
+    </tr>
+    <tr>
+      <th>week 4</th>
+      <td>3.76</td>
+      <td>4.35</td>
+      <td>4.95</td>
+      <td>5.53</td>
+      <td>6.12</td>
+      <td>6.72</td>
+      <td>7.31</td>
+      <td>7.9</td>
+      <td>8.48</td>
+      <td>9.08</td>
+      <td>9.66</td>
+    </tr>
+    <tr>
+      <th>week 5</th>
+      <td>4</td>
+      <td>4.68</td>
+      <td>5.36</td>
+      <td>6.02</td>
+      <td>6.69</td>
+      <td>7.37</td>
+      <td>8.04</td>
+      <td>8.72</td>
+      <td>9.38</td>
+      <td>10.06</td>
+      <td>10.72</td>
+    </tr>
+    <tr>
+      <th>week 6</th>
+      <td>4.2</td>
+      <td>4.94</td>
+      <td>5.68</td>
+      <td>6.41</td>
+      <td>7.15</td>
+      <td>7.89</td>
+      <td>8.63</td>
+      <td>9.37</td>
+      <td>10.1</td>
+      <td>10.84</td>
+      <td>11.57</td>
+    </tr>
+    <tr>
+      <th>week 7</th>
+      <td>4.36</td>
+      <td>5.15</td>
+      <td>5.94</td>
+      <td>6.72</td>
+      <td>7.52</td>
+      <td>8.31</td>
+      <td>9.1</td>
+      <td>9.89</td>
+      <td>10.68</td>
+      <td>11.47</td>
+      <td>12.25</td>
+    </tr>
+    <tr>
+      <th>week 8</th>
+      <td>4.48</td>
+      <td>5.32</td>
+      <td>6.15</td>
+      <td>6.72</td>
+      <td>7.81</td>
+      <td>8.64</td>
+      <td>9.48</td>
+      <td>10.31</td>
+      <td>11.14</td>
+      <td>11.97</td>
+      <td>12.8</td>
+    </tr>
+    <tr>
+      <th>week 9</th>
+      <td>4.58</td>
+      <td>5.45</td>
+      <td>6.32</td>
+      <td>6.97</td>
+      <td>8.04</td>
+      <td>8.91</td>
+      <td>9.78</td>
+      <td>10.64</td>
+      <td>11.51</td>
+      <td>12.37</td>
+      <td>13.24</td>
+    </tr>
+    <tr>
+      <th>week 10</th>
+      <td>4.66</td>
+      <td>5.56</td>
+      <td>6.45</td>
+      <td>7.17</td>
+      <td>8.23</td>
+      <td>9.12</td>
+      <td>10.02</td>
+      <td>10.91</td>
+      <td>11.8</td>
+      <td>12.69</td>
+      <td>13.59</td>
+    </tr>
+    <tr>
+      <th>week 11</th>
+      <td>4.72</td>
+      <td>5.64</td>
+      <td>6.56</td>
+      <td>7.33</td>
+      <td>8.38</td>
+      <td>9.29</td>
+      <td>10.21</td>
+      <td>11.12</td>
+      <td>12.04</td>
+      <td>12.95</td>
+      <td>13.87</td>
+    </tr>
+    <tr>
+      <th>week 12</th>
+      <td>4.77</td>
+      <td>5.71</td>
+      <td>6.64</td>
+      <td>7.46</td>
+      <td>8.5</td>
+      <td>9.43</td>
+      <td>10.36</td>
+      <td>11.29</td>
+      <td>12.23</td>
+      <td>13.16</td>
+      <td>14.09</td>
+    </tr>
+  </table>
+)
+
+export default Weeksweek
