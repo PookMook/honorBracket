@@ -6,9 +6,12 @@ import Nav from '../components/nav'
 import Calc from '../components/honorCalc'
 
 const IndexPage = function (props) {
+  let playerInPrevPool = 0;
   const standings = props.data.allCurrentWeekCsv.edges.map((node) => node.node).sort(compare)
   const brackets = bracketsPool.map(function (bracket, i) {
-    const lastInBracket = Math.floor((standings.length * bracket) / 100)
+    const lastInBracket = Math.round((standings.length * bracket) / 100)
+    const inPool = lastInBracket - playerInPrevPool
+    playerInPrevPool += inPool
     let firstInBracket = 0
     if (i > 0) { firstInBracket = Math.floor((standings.length * bracketsPool[i - 1]) / 100) }
     return (
@@ -18,7 +21,9 @@ const IndexPage = function (props) {
         PoolSize: lastInBracket,
         ceiling: standings[firstInBracket].honor,
         floor: standings[lastInBracket - 1].honor,
-        RP: bracketsRP[i]
+        deltaFloor: standings[lastInBracket] ? standings[lastInBracket].honor : 0,
+        RP: bracketsRP[i],
+        inPool: inPool
       }
     )
   })

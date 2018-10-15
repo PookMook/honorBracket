@@ -10,6 +10,7 @@ const SecondPage = () => (
     <h1>About</h1>
     <Nav />
     <p>This tool has been developed by Pleingaz from the &lt;RETURN&gt; guild in order to help rankers understand the ranking system in World of Warcraft vanilla.</p>
+    <p>Most of the formulas used by this tool comes from <a href="http://wowwiki.wikia.com/wiki/Honor_system_(pre-2.0_formulas)#Rank_Points" target='_blank'>wowwiki</a>, honorspy and the LH core.</p>
     <h2>What's ranking ?</h2>
     <p>Ranking is a long process in World of Warcraft Vanilla. It is the PVP progression, gives reward and titles. Every week, on reset (usually on Wednesday), the new ranks are processed server side. Characters compete with other characters in the same faction to gain ranks and get access to powerful rewards.</p>
 
@@ -39,19 +40,19 @@ const SecondPage = () => (
     <h2>How brackets work</h2>
     <p>Once the week ends (at reset, usually on Wednesday), the honor from all characters having done at least 15 honor kills are compiled in a <Link to='/standings/'>list</Link>, sorted by honor. The more honor you have, the better your standing. The amount of player having done 15 honor kills this week is known as the "pool size".</p>
     <ul class='compact'>
-      <li>Braclet 1: all the charaters with 15 HK</li>
-      <li>Braclet 2: top 85.8% of poolsize</li>
-      <li>Braclet 3: top 71.5% of poolsize</li>
-      <li>Braclet 4: top 58.7% of poolsize</li>
-      <li>Braclet 5: top 47.7% of poolsize</li>
-      <li>Braclet 6: top 37.7% of poolsize</li>
-      <li>Braclet 7: top 28.7% of poolsize</li>
-      <li>Braclet 8: top 20.7% of poolsize</li>
-      <li>Braclet 9: top 13.7% of poolsize</li>
-      <li>Braclet 10: top 7.7% of poolsize</li>
-      <li>Braclet 11: top 3.7% of poolsize</li>
-      <li>Braclet 12: top 1.7% of poolsize</li>
-      <li>Braclet 13: top 0.7% of poolsize</li>
+      <li>Braclet 1: all the charaters with 15 HK to top 85.8% of poolsize</li>
+      <li>Braclet 2: top 85.8% to top top 71.5% of poolsize</li>
+      <li>Braclet 3: top 71.5% to top top 58.7% of poolsize</li>
+      <li>Braclet 4: top 58.7% to top 47.7% of poolsize</li>
+      <li>Braclet 5: top 47.7% to top 37.7% of poolsize</li>
+      <li>Braclet 6: top 37.7% to top 28.7% of poolsize</li>
+      <li>Braclet 7: top 28.7% to top 20.7% of poolsize</li>
+      <li>Braclet 8: top 20.7% to top 13.7% of poolsize</li>
+      <li>Braclet 9: top 13.7% to top 7.7% of poolsize</li>
+      <li>Braclet 10: top 7.7% to top 3.7% of poolsize</li>
+      <li>Braclet 11: top 3.7% to top 1.7% of poolsize</li>
+      <li>Braclet 12: top 1.7% to top 0.7% of poolsize</li>
+      <li>Braclet 13: top 0.7% to top 0.2% of poolsize</li>
       <li>Braclet 14: top 0.2% of poolsize</li>
     </ul>
     <p>So for instance, if 1 000 characters kill 15 opposing characters on your faction, the bracket 14 will host the 2 characters with the most honor this week, bracket 13 will host the 12 following (top 0.7% - top 0.2%), etc.</p>
@@ -60,7 +61,7 @@ const SecondPage = () => (
 
     <h2>Ranking points</h2>
     <p>Once you know in which bracket you are for the week (depending on your honor this week), you can then calculate how much RP you will earn this specific week.</p>
-    <p>You first need to remove 20% of your current Ranking points, this process is known as the "RP decay". Once this is done, you can add your earnings :</p>
+    <p>You first need to add your earnings :</p>
     <ul class='compact'>
       <li>Braclet 1: 0 RP</li>
       <li>Braclet 2: 400 RP</li>
@@ -78,6 +79,7 @@ const SecondPage = () => (
       <li>Braclet 14: 12 000 RP</li>
     </ul>
     <p>You also have to add the delta RP earned within your bracket. This delta is calculated in comparison to other people in the bracket. You can earn between 0 and 1000 RP (0->400 for bracket 1, 0->600 for bracket 2) depending on how close to the honor ceiling of your bracket you are.</p>
+    <p>Each week your global RP decays by 20%. To calculate your final weekly adjustment, you substract your decay from your gains. If this amount is negative (ie, you decay more that you earn), you cut in half your weekly adjustment, and if this is still under - 2500 RP, you cap it at -2500 RP (ie, you can not decay more than half a rank per week)</p>
     <p>You know now how much Rank Points you will have, let's see what rank it will give you. You can also calculate your Ranking Points using the <Link to='/'>bracket page</Link></p>
 
     <h2>RP => rank</h2>

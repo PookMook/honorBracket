@@ -10,7 +10,7 @@ const Brackets = function (props) {
           <tr>
             <th>Bracket</th>
             <th>Cutoff</th>
-            <th>PoolSize</th>
+            <th>PoolSize (comp)</th>
             <th>Honor ceiling</th>
             <th>Honor floor</th>
             <th>Floor RP gains</th>

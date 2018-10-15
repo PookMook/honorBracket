@@ -21,24 +21,32 @@ export default class Calc extends Component {
 
   calculate ({honor, rank}) {
     let activeBracket = this.props.brackets.find(function (bracket) { return parseInt(bracket.floor) < parseInt(honor) })
-    if (!activeBracket) { activeBracket = {PoolSize: 0, RP: 0, bracket: 0, ceiling: 0, floor: 0, top: 1} }
+    if (!activeBracket) { activeBracket = this.props.brackets[13] }
     let delta = this.calcDelta(honor, activeBracket)
     let RP = this.rank2RP(rank)
     let decay = Math.floor(RP * 0.20)
-    let nextWeekRP = RP + activeBracket.RP + delta - decay
+    let adjustment = this.adjust(RP, activeBracket.RP + delta)
+    let nextWeekRP = RP + adjustment
     let nextRank = this.RP2rank(nextWeekRP)
-    return {bracket: activeBracket.bracket, floor: activeBracket.RP, RP, delta, decay, nextWeekRP, nextRank}
+    return {bracket: activeBracket.bracket, floor: activeBracket.RP, RP, delta, decay, nextWeekRP, nextRank, adjustment}
+  }
+
+  adjust (RP, gains) {
+    let adjustment = gains - Math.floor(RP * 0.20)
+    if (adjustment < 0) { adjustment /= 2 }
+    if (adjustment < -2500) { adjustment = -2500 }
+    return Math.round(adjustment)
   }
 
   calcDelta (honor, activeBracket) {
     let delta = 0
-    delta = Math.round((honor - activeBracket.floor) / (activeBracket.ceiling - activeBracket.floor) * 1000)
+    delta = Math.round((honor - activeBracket.deltaFloor) / (activeBracket.ceiling - activeBracket.deltaFloor) * 1000)
     if (delta > 1000) { delta = 1000 }
     if (activeBracket.bracket === 1) {
-      delta = Math.round((honor - activeBracket.floor) / (activeBracket.ceiling - activeBracket.floor) * 400)
+      delta = Math.round((honor - activeBracket.deltaFloor) / (activeBracket.ceiling - activeBracket.deltaFloor) * 400)
       if (delta > 400) { delta = 400 }
     } else if (activeBracket.bracket === 2) {
-      delta = Math.round((honor - activeBracket.floor) / (activeBracket.ceiling - activeBracket.floor) * 600)
+      delta = Math.round((honor - activeBracket.deltaFloor) / (activeBracket.ceiling - activeBracket.deltaFloor) * 600)
       if (delta > 600) { delta = 600 }
     }
     return delta
@@ -95,6 +103,10 @@ export default class Calc extends Component {
             <tr>
               <th>Decay</th>
               <td>- {this.state.decay}</td>
+            </tr>
+            <tr>
+              <th>Weekly adjustment</th>
+              <td>{this.state.adjustment < 0 && <span>(&lt; 0: adjustment halved ) </span>}{this.state.adjustment <= -2500 && <span>(&lt; -2500: adjustment capped ) </span>}{this.state.adjustment}</td>
             </tr>
             <tr>
               <th>RP expected</th>
