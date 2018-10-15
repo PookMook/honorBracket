@@ -11,9 +11,9 @@ const RankGraph = (props) => (
       ))}
 
       <Line stroke='green' strokeWidth={1} lineCap='round' lineJoin='round' points={[honor2x(1500000),RP2y(13000),
-        ...props.brackets.map((bracket) => (
+        ...props.brackets.flatMap((bracket) => (
           [honor2x(bracket.ceiling),RP2y(bracket.RPmax)]
-        )).flat(),honor2x(0),RP2y(0)]} x={0} y={0} />
+        )),honor2x(0),RP2y(0)]} x={0} y={0} />
 
       {yAxis.map((y) => (
         <>

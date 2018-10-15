@@ -11,9 +11,9 @@ const RankGraphLog = (props) => (
       ))}
 
       <Line stroke='green' strokeWidth={1} lineCap='round' lineJoin='round' points={[honor2x(3500000),RP2y(13000),
-        ...props.brackets.map((bracket) => (
+        ...props.brackets.flatMap((bracket) => (
           [honor2x(bracket.ceiling),RP2y(bracket.RPmax)]
-        )).flat(),25,425]} x={0} y={0} />
+        )),25,425]} x={0} y={0} />
 
       {yAxis.map((y) => (
         <>
