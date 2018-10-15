@@ -2,7 +2,7 @@ import React from 'react'
 import { Stage, Layer, Rect, Text, Line } from 'react-konva'
 
 const RankLine = (props) => (
-  <Stage width={960} height={300}>
+  <Stage width={940} height={150}>
     <Layer>
       <Text text='Ranking Points (RP, lower) required per rank (upper)' fill='yellow' />
       <Rect

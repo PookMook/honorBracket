@@ -1,5 +1,7 @@
 import React, {Component} from 'react'
-import RankLine from './konvaRank'
+import RankLine from './rankLine'
+import RankGraph from './rankGraph'
+import RankGraphLog from './rankGraphLog'
 
 export default class Calc extends Component {
   constructor (props) {
@@ -119,6 +121,8 @@ export default class Calc extends Component {
           </tbody>
         </table>
         <RankLine state={this.state} />
+        <RankGraph state={this.state} {...this.props} />
+        <RankGraphLog state={this.state} {...this.props} />
       </div>
     )
   }

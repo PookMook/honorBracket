@@ -10,7 +10,7 @@ const SecondPage = () => (
     <h1>About</h1>
     <Nav />
     <p>This tool has been developed by Pleingaz from the &lt;RETURN&gt; guild in order to help rankers understand the ranking system in World of Warcraft vanilla.</p>
-    <p>Most of the formulas used by this tool comes from <a href="http://wowwiki.wikia.com/wiki/Honor_system_(pre-2.0_formulas)#Rank_Points" target='_blank'>wowwiki</a>, honorspy and the LH core.</p>
+    <p>Most of the formulas used by this tool comes from <a href='http://wowwiki.wikia.com/wiki/Honor_system_(pre-2.0_formulas)#Rank_Points' target='_blank' rel='noopener noreferrer'>wowwiki</a>, honorspy and the LH core.</p>
     <h2>What's ranking ?</h2>
     <p>Ranking is a long process in World of Warcraft Vanilla. It is the PVP progression, gives reward and titles. Every week, on reset (usually on Wednesday), the new ranks are processed server side. Characters compete with other characters in the same faction to gain ranks and get access to powerful rewards.</p>
 
