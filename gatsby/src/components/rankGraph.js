@@ -2,10 +2,9 @@ import React from 'react'
 import { Stage, Layer, Rect, Circle, Text, Line } from 'react-konva'
 
 const RankGraph = (props) => (
-  <Stage width={920} height={450}>
+  <Stage width={920} height={500}>
     <Layer>
-
-
+    <Text text='Ranking points per honor' fill='yellow' x={30} />
       {props.brackets.map((bracket, i) => (
           <Circle x={honor2x(bracket.ceiling)} y={RP2y(bracket.RPmax)} radius={3} fill='green' />
       ))}

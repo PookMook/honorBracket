@@ -5,6 +5,7 @@ const RankGraphLog = (props) => (
   <Stage width={920} height={450}>
     <Layer>
 
+      <Text text='Ranking points per honor (x-axis log based)' fill='yellow' x={30} />
 
       {props.brackets.map((bracket, i) => (
           <Circle x={honor2x(bracket.ceiling)} y={RP2y(bracket.RPmax)} radius={3} fill='green' />
