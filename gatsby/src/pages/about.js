@@ -55,7 +55,7 @@ const SecondPage = () => (
       <li>Braclet 13: top 0.7% to top 0.2% of poolsize</li>
       <li>Braclet 14: top 0.2% of poolsize</li>
     </ul>
-    <p>So for instance, if 1 000 characters kill 15 opposing characters on your faction, the bracket 14 will host the 2 characters with the most honor this week, bracket 13 will host the 12 following (top 0.7% - top 0.2%), etc.</p>
+    <p>So for instance, if 1 000 characters kill 15 opposing characters on your faction, the bracket 14 will host the 2 characters with the most honor this week, bracket 13 will host the 5 following (top 0.7% - top 0.2%), etc.</p>
     <p>But if 5 000 characters kill 15 opposing characters on your faction, the bracket 14 will then host the 10 characters with the most honor this week, bracket 13 will host the 25 following (top 0.7% - top 0.2%), etc.</p>
     <p>You can visualize the honor required to enter each bracket on the <Link to='/'>bracket page</Link>.</p>
 
