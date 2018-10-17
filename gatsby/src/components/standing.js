@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Standing = (props) => (
-  <tr class={"bracket"+props.bracket}>
+  <tr className={"bracket"+props.bracket}>
     <td>{props.i + 1}</td>
     <td>{props.bracket}</td>
     <td>{props.name}</td>
