@@ -14,7 +14,7 @@ const Layout = ({ children }) => (
         site {
           siteMetadata {
             title
-	    date
+	          lastUpdate
             backgroundColor
             themeColor
             headerColor
