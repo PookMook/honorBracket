@@ -4,6 +4,7 @@ import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
 import Header from './header'
+import LastUpdate from './lastUpdate'
 import './layout.css'
 import favicon from '../images/logo.png';
 
@@ -38,6 +39,7 @@ const Layout = ({ children }) => (
           <html lang="en" />
         </Helmet>
         <Header {...data.site.siteMetadata} />
+        <LastUpdate {...data.site.siteMetadata} />
         <div
           style={{
             margin: '0 auto',
