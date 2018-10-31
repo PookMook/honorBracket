@@ -10,3 +10,4 @@ git pull
 git add .
 git commit -m "Updating currentWeek.csv"
 git push
+git push deploy
