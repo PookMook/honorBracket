@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-const Header = ({ title, backgroundColor, themeColor, headerColor, headerTitleColor }) => (
+const Header = ({ title, date, backgroundColor, themeColor, headerColor, headerTitleColor }) => (
   <div
     style={{
       background: headerColor,
@@ -23,7 +23,7 @@ const Header = ({ title, backgroundColor, themeColor, headerColor, headerTitleCo
             textDecoration: 'none',
           }}
         >
-          {title}
+          {title} updated at {date}
         </Link>
       </h1>
     </div>
