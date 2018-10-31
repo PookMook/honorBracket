@@ -23,7 +23,7 @@ const Header = ({ title, lastUpdate, backgroundColor, themeColor, headerColor, h
             textDecoration: 'none',
           }}
         >
-          {title} updated at {lastUpdate}
+          {title} (updated at {lastUpdate})
         </Link>
       </h1>
     </div>

@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'HonorSpy and bracket visualizer',
+    title: 'Bracket Visualizer',
     lastUpdate: 'test',
     backgroundColor: '#003366',
     themeColor: '#003366',
