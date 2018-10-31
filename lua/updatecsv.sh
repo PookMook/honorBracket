@@ -15,7 +15,7 @@ cd ~/git/honorBracket/
 cd gatsby/src/data
 python3 sortCSV.py
 echo "name,honor,class,LWHonor,standing,rank,rankProgress,RP" > currentWeek.csv
-cat currentWeekSorted.csv >> currectWeek.csv
+cat currentWeekSorted.csv >> currentWeek.csv
 rm currentWeekSorted.csv
 
 cd ~/git/honorBracket/
