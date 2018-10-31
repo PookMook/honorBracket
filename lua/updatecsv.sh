@@ -23,6 +23,7 @@ cd ~/git/honorBracket/
 if output=$(git status --porcelain) && [ -z "$output" ]; then
 	  # Working directory clean
 	  echo "no changes at `date`" >> /var/log/crontab
+	  date=$(date -u)
 	  sed -E -i "s/lastUpdate\: '.+'/lastUpdates: '$date'/g" gatsby/gatsby-config.js
 else 
 	  echo "uncommitted changesi at `date`, let's go" >> /var/log/crontab
