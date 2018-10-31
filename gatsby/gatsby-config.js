@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Bracket Visualizer',
-    lastUpdate: 'Wed Oct 31 20:26:42 UTC 2018',
+    lastUpdate: 'Wed Oct 31 23:14:09 UTC 2018',
     backgroundColor: '#003366',
     themeColor: '#003366',
     headerColor: '#FFCC00',
