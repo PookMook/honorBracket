@@ -2,11 +2,26 @@
 
 #Get file
 echo "Starting Crontab job for honorBracket at `date`" >> /var/log/crontab
+cd ~/git/honorBracket/
+git pull
+
+
 cd "/mnt/d/wow/World of Warcraft Classic"
 lua5.3 tocsv.lua
 mv export/currentWeek.csv ~/git/honorBracket/gatsby/src/data
+
 cd ~/git/honorBracket/
-git pull
+
+if output=$(git status --porcelain) && [ -z "$output" ]; then
+	  # Working directory clean
+	  echo "no changes at `date`" >> /var/log/crontab
+else 
+	  echo "uncommitted changesi at `date`, let's go" >> /var/log/crontab
+	    # Uncommitted changes
+fi
+
+
+
 git add .
 git commit -m "Updating currentWeek.csv"
 git push
