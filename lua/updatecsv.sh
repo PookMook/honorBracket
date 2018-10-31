@@ -26,7 +26,7 @@ if output=$(git status --porcelain) && [ -z "$output" ]; then
 else 
 	  echo "uncommitted changes at `date`, let's go" >> /var/log/crontab
 	  date=$(date -u)
-	  sed -E -i "s/lastUpdate\: '.+'/lastUpdates: '$date'/g" gatsby/gatsby-config.js
+	  sed -E -i "s/lastUpdate\: '.+'/lastUpdate: '$date'/g" gatsby/gatsby-config.js
 	    # Uncommitted changes
 fi
 
