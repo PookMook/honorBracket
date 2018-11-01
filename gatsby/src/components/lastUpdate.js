@@ -9,7 +9,7 @@ const LastUpdate = ({ lastUpdate }) => (
         padding: '0.5rem 1.0875rem',
       }}
     >
-      <p>last updated at {lastUpdate}</p>
+      <p>last updated on {lastUpdate}</p>
     </div>
   </nav>
 )
