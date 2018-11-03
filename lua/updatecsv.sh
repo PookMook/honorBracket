@@ -2,6 +2,9 @@
 
 #Get file
 echo "Starting Crontab job for honorBracket at `date`" >> /var/log/crontab
+
+date=$(date -u)
+
 cd ~/git/honorBracket/
 git pull
 
@@ -25,7 +28,6 @@ if output=$(git status --porcelain) && [ -z "$output" ]; then
 	  echo "no changes at `date`" >> /var/log/crontab
 else 
 	  echo "uncommitted changes at `date`, let's go" >> /var/log/crontab
-	  date=$(date -u)
 	  sed -E -i "s/lastUpdate\: '.+'/lastUpdate: '$date'/g" gatsby/gatsby-config.js
 	    # Uncommitted changes
 fi
