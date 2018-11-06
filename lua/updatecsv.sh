@@ -1,8 +1,6 @@
 #!/bin/bash
 
 #Get file
-echo "Starting Crontab job for honorBracket at `date`" >> /var/log/crontab
-
 date=$(date -u)
 
 cd ~/git/honorBracket/
